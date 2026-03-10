@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_NAME } from "@/lib/constants";
 
 const footerLinks = {
@@ -50,24 +51,14 @@ export default function Footer() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                     {/* Brand column */}
                     <div className="sm:col-span-2 lg:col-span-1">
-                        <Link href="/" className="inline-flex items-center gap-2.5 group">
-                            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center">
-                                <svg
-                                    className="w-4.5 h-4.5 text-white"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={2}
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                    />
-                                </svg>
-                            </div>
-                            <span className="text-lg font-bold text-white">{SITE_NAME}</span>
+                        <Link href="/" className="inline-flex items-center group">
+                            <Image
+                                src="/images/logo.png"
+                                alt={SITE_NAME}
+                                width={200}
+                                height={60}
+                                className="w-auto h-12 object-contain group-hover:opacity-90 transition-opacity bg-white/10 rounded sm:bg-transparent p-1 sm:p-0"
+                            />
                         </Link>
                         <p className="mt-4 text-sm text-neutral-400 leading-relaxed max-w-xs">
                             Serving families, supporting students, and strengthening our community

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { NAV_ITEMS, SITE_NAME } from "@/lib/constants";
@@ -26,33 +27,17 @@ export default function Header() {
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="flex items-center gap-3 group"
+                        className="flex items-center group"
                         aria-label={`${SITE_NAME} - Home`}
                     >
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                            <svg
-                                className="w-5 h-5 text-white"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth={2}
-                                aria-hidden="true"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                />
-                            </svg>
-                        </div>
-                        <div className="hidden sm:block">
-                            <span className="text-lg font-bold text-neutral-900 tracking-tight">
-                                Feeding the Future
-                            </span>
-                            <span className="block text-xs font-medium text-brand-600 -mt-0.5">
-                                Project
-                            </span>
-                        </div>
+                        <Image
+                            src="/images/logo.png"
+                            alt={SITE_NAME}
+                            width={240}
+                            height={80}
+                            className="w-auto h-12 sm:h-14 object-contain group-hover:opacity-90 transition-opacity"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Nav */}
@@ -62,8 +47,8 @@ export default function Header() {
                                 key={item.href}
                                 href={item.href}
                                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${isActive(item.href)
-                                        ? "text-brand-700 bg-brand-50 font-semibold"
-                                        : "text-neutral-600 hover:text-brand-700 hover:bg-brand-50"
+                                    ? "text-brand-700 bg-brand-50 font-semibold"
+                                    : "text-neutral-600 hover:text-brand-700 hover:bg-brand-50"
                                     }`}
                                 {...(isActive(item.href) ? { "aria-current": "page" as const } : {})}
                             >
@@ -116,8 +101,8 @@ export default function Header() {
                                 key={item.href}
                                 href={item.href}
                                 className={`block px-4 py-3 text-base font-medium rounded-lg transition-colors ${isActive(item.href)
-                                        ? "text-brand-700 bg-brand-50 font-semibold"
-                                        : "text-neutral-700 hover:text-brand-700 hover:bg-brand-50"
+                                    ? "text-brand-700 bg-brand-50 font-semibold"
+                                    : "text-neutral-700 hover:text-brand-700 hover:bg-brand-50"
                                     }`}
                                 {...(isActive(item.href) ? { "aria-current": "page" as const } : {})}
                             >
