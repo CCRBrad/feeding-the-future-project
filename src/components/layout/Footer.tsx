@@ -27,24 +27,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-neutral-900 text-neutral-300">
-            {/* Donation banner */}
-            <div className="bg-gradient-to-r from-brand-700 to-brand-600">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-                        Help Us Strengthen Our Community
-                    </h2>
-                    <p className="text-brand-100 mb-6 max-w-2xl mx-auto">
-                        When you give, you help create practical support, stronger partnerships,
-                        and meaningful community impact.
-                    </p>
-                    <Link
-                        href="/donate/"
-                        className="inline-flex items-center px-8 py-3.5 text-base font-semibold text-brand-700 bg-white rounded-full hover:bg-brand-50 shadow-lg hover:shadow-xl transition-all"
-                    >
-                        Donate Today
-                    </Link>
-                </div>
-            </div>
+
 
             {/* Footer content */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">

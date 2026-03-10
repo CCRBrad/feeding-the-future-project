@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/constants";
 import { PageHero, Section, SectionHeader, Button } from "@/components/ui";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import StructuredData from "@/components/seo/StructuredData";
+import Image from "next/image";
 
 export const metadata = generatePageMetadata({
     title: "Events",
@@ -16,16 +17,19 @@ const pastEvents = [
         title: "Back-to-School Supply Drive",
         date: "August 2025",
         desc: "Provided school supplies to 50+ students across 3 partner schools in the Columbus metro area.",
+        image: "/images/events/community-1.jpg",
     },
     {
         title: "Holiday Family Support Event",
         date: "December 2025",
         desc: "Delivered holiday meals and gift packages to 40 families identified through school and community partners.",
+        image: "/images/events/community-2.jpg",
     },
     {
-        title: "Community Volunteer Day",
+        title: "Community Partnership Day",
         date: "October 2025",
         desc: "Mobilized 25+ volunteers for a day of on-site service at two local schools — classroom support, campus cleanup, and family engagement.",
+        image: "/images/events/braves-game.webp",
     },
 ];
 
@@ -84,16 +88,27 @@ export default function EventsPage() {
             {/* Past Events */}
             <Section className="bg-white">
                 <SectionHeader eyebrow="Recent Highlights" title="Past Events" />
-                <div className="max-w-3xl mx-auto space-y-4">
+                <div className="max-w-4xl mx-auto space-y-6">
                     {pastEvents.map((event) => (
-                        <div key={event.title} className="bg-neutral-50 rounded-xl p-6 border border-neutral-200/80">
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                                <h3 className="font-semibold text-neutral-900">{event.title}</h3>
-                                <span className="text-xs font-medium text-brand-700 bg-brand-50 px-3 py-1 rounded-full mt-1 sm:mt-0">
-                                    {event.date}
-                                </span>
+                        <div key={event.title} className="bg-neutral-50 rounded-2xl border border-neutral-200/80 overflow-hidden sm:flex">
+                            <div className="sm:w-48 sm:flex-shrink-0">
+                                <Image
+                                    src={event.image}
+                                    alt={event.title}
+                                    width={400}
+                                    height={300}
+                                    className="w-full h-48 sm:h-full object-cover"
+                                />
                             </div>
-                            <p className="text-sm text-neutral-600 leading-relaxed">{event.desc}</p>
+                            <div className="p-6 flex-1">
+                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                    <h3 className="font-semibold text-neutral-900 text-lg">{event.title}</h3>
+                                    <span className="text-xs font-medium text-brand-700 bg-brand-50 px-3 py-1 rounded-full mt-1 sm:mt-0">
+                                        {event.date}
+                                    </span>
+                                </div>
+                                <p className="text-sm text-neutral-600 leading-relaxed">{event.desc}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
