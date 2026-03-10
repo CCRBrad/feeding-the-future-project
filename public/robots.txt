@@ -1,0 +1,7 @@
+# Robots.txt for Feeding the Future Project
+# https://feedingthefutureproject.org
+
+User-agent: *
+Allow: /
+
+Sitemap: https://feedingthefutureproject.org/sitemap.xml
