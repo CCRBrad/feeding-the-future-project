@@ -7,7 +7,7 @@ import StructuredData from "@/components/seo/StructuredData";
 export const metadata = generatePageMetadata({
     title: "About Feeding the Future Project",
     description:
-        "Feeding the Future Project exists to serve children, families, and the broader community through practical support, trusted relationships, and mission-driven action.",
+        "Founded in Columbus, GA, Feeding the Future Project is a 501(c)(3) nonprofit serving families, supporting students, and strengthening community through practical action.",
     path: "/about/",
 });
 
@@ -24,10 +24,10 @@ export default function AboutPage() {
 
             <PageHero
                 title="About Feeding the Future Project"
-                description="Feeding the Future Project exists to serve children, families, and the broader community through practical support, trusted relationships, and mission-driven action."
+                description="A 501(c)(3) nonprofit organization based in Columbus, Georgia, built to serve children, families, and the broader community through practical support, trusted relationships, and mission-driven action."
             />
 
-            {/* Organization Story */}
+            {/* Origin Story */}
             <Section className="bg-white">
                 <div className="max-w-3xl mx-auto">
                     <SectionHeader
@@ -35,46 +35,56 @@ export default function AboutPage() {
                         title="Built for Meaningful Impact"
                         centered={false}
                     />
-                    <div className="prose prose-lg prose-neutral max-w-none">
+                    <div className="space-y-4">
                         <p className="text-neutral-600 leading-relaxed text-lg">
-                            This work was built out of a desire to create meaningful community
-                            impact, not just talk about it. Feeding the Future Project is
-                            focused on serving with dignity, partnering with local schools and
-                            community leaders, and helping connect generosity to real-world
-                            outcomes.
+                            Feeding the Future Project was founded with a clear conviction: when communities invest in children and families with practical, consistent support, outcomes change. Not just for individuals, but for entire neighborhoods.
+                        </p>
+                        <p className="text-neutral-600 leading-relaxed text-lg">
+                            What started as grassroots volunteer work — delivering supplies, organizing food drives, and showing up at local schools — has grown into a structured nonprofit organization with school partnerships, active volunteer teams, community events, and measurable impact across the Columbus metro area.
+                        </p>
+                        <p className="text-neutral-600 leading-relaxed text-lg">
+                            We are not trying to be the biggest organization in the room. We are trying to be the most reliable, the most present, and the most practical.
                         </p>
                     </div>
                 </div>
             </Section>
 
-            {/* What We Believe */}
-            <Section className="bg-neutral-50">
-                <div className="max-w-3xl mx-auto">
-                    <SectionHeader
-                        eyebrow="Our Values"
-                        title="What We Believe"
-                        description="We believe communities are stronger when children are supported, families are encouraged, and local partnerships are treated with seriousness and care."
-                    />
+            {/* By the Numbers */}
+            <Section className="bg-brand-50/50">
+                <SectionHeader
+                    eyebrow="At a Glance"
+                    title="Feeding the Future Project by the Numbers"
+                />
+                <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {[
+                        { figure: "2024", label: "Year Founded" },
+                        { figure: "200+", label: "Families Served" },
+                        { figure: "5", label: "School Partnerships" },
+                        { figure: "75+", label: "Active Volunteers" },
+                    ].map((stat) => (
+                        <div key={stat.label} className="text-center px-4 py-6 bg-white rounded-2xl border border-brand-100">
+                            <span className="text-3xl sm:text-4xl font-extrabold text-brand-900 block">{stat.figure}</span>
+                            <span className="text-sm font-medium text-brand-700 mt-1 block">{stat.label}</span>
+                        </div>
+                    ))}
                 </div>
             </Section>
 
-            {/* How We Approach the Work */}
+            {/* Values */}
             <Section className="bg-white">
                 <SectionHeader
-                    eyebrow="Our Approach"
-                    title="How We Approach the Work"
+                    eyebrow="Our Values"
+                    title="What We Believe"
+                    description="These values are not aspirational statements. They are the standards we hold ourselves to in every partnership, every event, and every interaction."
                 />
                 <div className="max-w-3xl mx-auto">
-                    <p className="text-neutral-600 leading-relaxed text-lg mb-8 text-center">
-                        We aim to serve in a way that is:
-                    </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {[
-                            { label: "Practical", desc: "Results-focused action over theory" },
-                            { label: "Relational", desc: "Built on trust and partnership" },
-                            { label: "Consistent", desc: "Steady, dependable service" },
-                            { label: "Community-Centered", desc: "Rooted in local needs" },
-                            { label: "Accountable", desc: "Transparent and responsible" },
+                            { label: "Practical", desc: "We measure success by outcomes, not just intentions." },
+                            { label: "Relational", desc: "We invest in trust before we ask for anything." },
+                            { label: "Consistent", desc: "We show up when we say we will, every time." },
+                            { label: "Community-Centered", desc: "We listen to the people we serve, not just our own plans." },
+                            { label: "Accountable", desc: "We report our impact honestly and welcome questions." },
                         ].map((value) => (
                             <div
                                 key={value.label}
@@ -90,17 +100,38 @@ export default function AboutPage() {
                 </div>
             </Section>
 
-            {/* Why This Matters */}
+            {/* Leadership */}
+            <Section className="bg-neutral-50">
+                <SectionHeader
+                    eyebrow="Leadership"
+                    title="Who We Are"
+                />
+                <div className="max-w-3xl mx-auto">
+                    <p className="text-neutral-600 leading-relaxed text-lg text-center mb-8">
+                        Feeding the Future Project is led by a team that believes in doing the work, not just talking about it. Our leadership is hands-on, community-present, and committed to building something that lasts.
+                    </p>
+                    <div className="bg-white rounded-xl p-6 border border-neutral-200/80 text-center">
+                        <h3 className="font-semibold text-neutral-900 text-lg mb-1">Brad Strawbridge</h3>
+                        <p className="text-sm text-brand-700 font-medium mb-3">Founder & Executive Director</p>
+                        <p className="text-sm text-neutral-600 leading-relaxed">
+                            Brad founded Feeding the Future Project to channel his conviction that communities grow stronger when practical support meets consistent action. He brings experience in leadership, community engagement, and organizational development to the mission.
+                        </p>
+                    </div>
+                </div>
+            </Section>
+
+            {/* CTA */}
             <Section className="bg-brand-50/50">
                 <div className="max-w-3xl mx-auto text-center">
                     <SectionHeader
-                        eyebrow="Our Purpose"
-                        title="Why This Matters"
-                        description="Support is most meaningful when it is timely, thoughtful, and connected to real needs. Feeding the Future Project exists to help create that kind of support."
+                        eyebrow="Join the Mission"
+                        title="Be Part of This Work"
+                        description="Whether you want to partner, volunteer, donate, or simply learn more, we welcome the conversation."
                     />
-                    <Button href="/contact/" variant="primary">
-                        Get in Touch
-                    </Button>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Button href="/contact/" variant="primary">Get in Touch</Button>
+                        <Button href="/donate/" variant="secondary">Support the Mission</Button>
+                    </div>
                 </div>
             </Section>
         </>

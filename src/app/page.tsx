@@ -20,7 +20,6 @@ export default function HomePage() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
           <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-brand-100/40 rounded-full blur-3xl" />
           <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] bg-warm-100/30 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-brand-200/20 rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-4xl mx-auto text-center">
@@ -46,13 +45,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Mission */}
+      {/* Impact Snapshot — replaces the old generic mission section */}
       <Section className="bg-white">
         <SectionHeader
-          eyebrow="Our Mission"
-          title="Why This Work Matters"
-          description="Feeding the Future Project was built on a simple conviction: communities are stronger when children and families are supported in practical, meaningful ways. Our work is designed to connect generosity with action so that real needs are met through trusted relationships, local partnership, and consistent service."
+          eyebrow="Our Impact So Far"
+          title="Turning Support Into Action"
         />
+        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {[
+            { figure: "200+", label: "Families Served" },
+            { figure: "5", label: "School Partnerships" },
+            { figure: "75+", label: "Active Volunteers" },
+            { figure: "12", label: "Community Events" },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="text-center px-4 py-6 bg-brand-50 rounded-2xl border border-brand-100"
+            >
+              <span className="text-3xl sm:text-4xl font-extrabold text-brand-900 block">
+                {stat.figure}
+              </span>
+              <span className="text-sm font-medium text-brand-700 mt-1 block">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="text-center">
+          <Button href="/impact/" variant="secondary">
+            See Full Impact Report
+          </Button>
+        </div>
       </Section>
 
       {/* How We Help */}
@@ -92,20 +115,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Impact Snapshot */}
-      <Section className="bg-white">
-        <SectionHeader
-          eyebrow="Our Impact"
-          title="Every Act of Support Matters"
-          description="Every partnership matters. Every family matters. This work is about turning care into action and making sure support reaches people in ways that are thoughtful, practical, and real."
-        />
-        <div className="text-center">
-          <Button href="/impact/" variant="secondary">
-            See Our Impact
-          </Button>
-        </div>
-      </Section>
-
       {/* Schools Pathway */}
       <Section className="bg-brand-50/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -115,7 +124,7 @@ export default function HomePage() {
             description="If you are a school leader, counselor, staff member, or community liaison looking for a strong local partner, we would love to connect."
           />
           <Button href="/schools/" variant="primary">
-            Partner With Us
+            Learn About School Partnerships
           </Button>
         </div>
       </Section>
@@ -129,7 +138,7 @@ export default function HomePage() {
             description="If you want to be part of work that directly supports children, families, and schools, there is a place for you here."
           />
           <Button href="/volunteer/" variant="primary">
-            Volunteer
+            See Volunteer Opportunities
           </Button>
         </div>
       </Section>
@@ -148,28 +157,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Donation CTA */}
-      <section className="bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Help Create Lasting Community Impact
-          </h2>
-          <p className="mt-4 text-lg text-brand-100 max-w-2xl mx-auto">
-            When you give, you help create practical support, stronger
-            partnerships, and meaningful community impact.
-          </p>
-          <div className="mt-8">
-            <Button
-              href="/donate/"
-              variant="primary"
-              size="lg"
-              className="!bg-white !text-brand-700 hover:!bg-brand-50"
-            >
-              Donate Today
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Single Donation CTA — removed second duplicate */}
     </>
   );
 }

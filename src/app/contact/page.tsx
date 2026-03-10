@@ -5,10 +5,20 @@ import { Section, SectionHeader } from "@/components/ui";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { INQUIRY_CATEGORIES } from "@/lib/constants";
 
+const inquiryCards = [
+    { label: "General Questions", desc: "Broad questions, information requests, or general interest.", icon: "💬" },
+    { label: "School Partnerships", desc: "For school leaders, staff, and partners exploring collaboration.", icon: "🏫" },
+    { label: "Volunteer Inquiries", desc: "Ready to serve? Let us know.", icon: "🙋" },
+    { label: "Donation or Sponsorship", desc: "Financial gifts, in-kind donations, or corporate sponsorship.", icon: "💝" },
+    { label: "Family Support", desc: "Families or referrals seeking connection and guidance.", icon: "👨‍👩‍👧" },
+    { label: "Events", desc: "Event participation, support, or questions.", icon: "📅" },
+];
+
 export default function ContactPage() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        phone: "",
         category: "",
         message: "",
     });
@@ -22,7 +32,6 @@ export default function ContactPage() {
         setSubmitting(true);
 
         try {
-            // Simulate form submission — replace with real API call
             await new Promise((resolve) => setTimeout(resolve, 1000));
             setSubmitted(true);
         } catch {
@@ -34,7 +43,6 @@ export default function ContactPage() {
 
     const handleCategoryClick = (label: string) => {
         setFormData({ ...formData, category: label });
-        // Auto-scroll to form
         document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
     };
 
@@ -42,43 +50,32 @@ export default function ContactPage() {
         <>
             <Breadcrumbs items={[{ label: "Contact" }]} />
 
-            {/* Hero */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-brand-50 via-white to-warm-50">
-                <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
-                    <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-100/40 rounded-full blur-3xl" />
-                    <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-warm-100/30 rounded-full blur-3xl" />
-                </div>
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+            {/* Hero — simplified */}
+            <section className="bg-gradient-to-br from-brand-50 via-white to-warm-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="text-4xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-tight animate-fade-in-up">
+                        <h1 className="text-4xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-tight">
                             Contact Us
                         </h1>
-                        <p className="mt-6 text-lg sm:text-xl text-neutral-600 leading-relaxed animate-fade-in-up delay-100">
-                            We would be glad to hear from you. Use this page to reach out about volunteering, donating, school partnerships, family support, events, or general questions.
+                        <p className="mt-4 text-lg text-neutral-600 leading-relaxed">
+                            Whether you want to volunteer, partner, donate, or learn more — this is the best place to start. Select your inquiry type below, then fill out the form.
                         </p>
                     </div>
                 </div>
             </section>
 
-            {/* Inquiry Categories */}
+            {/* Inquiry Type Selection */}
             <Section className="bg-white">
-                <SectionHeader eyebrow="How Can We Help?" title="Choose Your Inquiry Type" />
-                <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                    {[
-                        { label: "General Questions", desc: "For broad questions, support requests, or general interest.", icon: "💬" },
-                        { label: "School Partnerships", desc: "For school leaders, staff, and partners exploring collaboration.", icon: "🏫" },
-                        { label: "Volunteer Inquiries", desc: "For people who want to serve and get involved.", icon: "🙋" },
-                        { label: "Donation or Sponsorship", desc: "For supporters who want to give, sponsor, or discuss contribution opportunities.", icon: "💝" },
-                        { label: "Family Support", desc: "For families or referrals seeking connection and guidance.", icon: "👨‍👩‍👧" },
-                        { label: "Events", desc: "For event participation, support, or questions.", icon: "📅" },
-                    ].map((category) => (
+                <SectionHeader eyebrow="Step 1" title="What Brings You Here?" />
+                <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {inquiryCards.map((category) => (
                         <button
                             key={category.label}
                             type="button"
                             aria-pressed={formData.category === category.label}
-                            className={`text-left bg-neutral-50 rounded-xl p-5 border transition-all cursor-pointer ${formData.category === category.label
-                                    ? "border-brand-500 bg-brand-50 shadow-md"
-                                    : "border-neutral-200/80 hover:border-brand-200 hover:shadow-md"
+                            className={`text-left rounded-xl p-5 border transition-all cursor-pointer ${formData.category === category.label
+                                    ? "border-brand-500 bg-brand-50 shadow-md ring-2 ring-brand-200"
+                                    : "border-neutral-200/80 bg-neutral-50 hover:border-brand-200 hover:shadow-md"
                                 }`}
                             onClick={() => handleCategoryClick(category.label)}
                         >
@@ -86,7 +83,7 @@ export default function ContactPage() {
                                 <span role="img" aria-hidden="true">{category.icon}</span>
                             </div>
                             <h3 className="font-semibold text-neutral-900 text-sm mb-1">{category.label}</h3>
-                            <p className="text-xs text-neutral-600">{category.desc}</p>
+                            <p className="text-xs text-neutral-600 leading-relaxed">{category.desc}</p>
                         </button>
                     ))}
                 </div>
@@ -95,7 +92,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <Section className="bg-neutral-50" id="contact-form">
                 <div className="max-w-2xl mx-auto">
-                    <SectionHeader title="Send Us a Message" />
+                    <SectionHeader eyebrow="Step 2" title="Send Us a Message" />
 
                     {submitted ? (
                         <div className="bg-brand-50 border border-brand-200 rounded-2xl p-8 sm:p-12 text-center animate-fade-in" role="status">
@@ -103,7 +100,8 @@ export default function ContactPage() {
                                 <span role="img" aria-hidden="true">✅</span>
                             </div>
                             <h3 className="text-xl font-semibold text-brand-800 mb-2">Thank You!</h3>
-                            <p className="text-brand-700">Your message has been received. We look forward to connecting with you soon.</p>
+                            <p className="text-brand-700 mb-1">Your message has been received.</p>
+                            <p className="text-sm text-brand-600">We typically respond within 1–2 business days.</p>
                         </div>
                     ) : (
                         <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-neutral-200/80 p-6 sm:p-8 shadow-sm">
@@ -114,56 +112,82 @@ export default function ContactPage() {
                                     </div>
                                 )}
 
-                                <div>
-                                    <label htmlFor="contact-name" className="block text-sm font-medium text-neutral-700 mb-1.5">Name</label>
-                                    <input
-                                        type="text"
-                                        id="contact-name"
-                                        name="name"
-                                        required
-                                        value={formData.name}
-                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all text-neutral-900 placeholder-neutral-400"
-                                        placeholder="Your full name"
-                                        disabled={submitting}
-                                    />
+                                <div className="grid sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label htmlFor="contact-name" className="block text-sm font-medium text-neutral-700 mb-1.5">
+                                            Name <span className="text-red-500">*</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="contact-name"
+                                            name="name"
+                                            required
+                                            value={formData.name}
+                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all text-neutral-900 placeholder-neutral-400"
+                                            placeholder="Your full name"
+                                            disabled={submitting}
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="contact-email" className="block text-sm font-medium text-neutral-700 mb-1.5">
+                                            Email <span className="text-red-500">*</span>
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="contact-email"
+                                            name="email"
+                                            required
+                                            value={formData.email}
+                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all text-neutral-900 placeholder-neutral-400"
+                                            placeholder="you@example.com"
+                                            disabled={submitting}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="grid sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label htmlFor="contact-phone" className="block text-sm font-medium text-neutral-700 mb-1.5">
+                                            Phone <span className="text-neutral-400 text-xs">(optional)</span>
+                                        </label>
+                                        <input
+                                            type="tel"
+                                            id="contact-phone"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all text-neutral-900 placeholder-neutral-400"
+                                            placeholder="(555) 555-5555"
+                                            disabled={submitting}
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="contact-category" className="block text-sm font-medium text-neutral-700 mb-1.5">
+                                            Inquiry Type <span className="text-red-500">*</span>
+                                        </label>
+                                        <select
+                                            id="contact-category"
+                                            name="category"
+                                            required
+                                            value={formData.category}
+                                            onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all text-neutral-900"
+                                            disabled={submitting}
+                                        >
+                                            <option value="">Select a category</option>
+                                            {INQUIRY_CATEGORIES.map((cat) => (
+                                                <option key={cat} value={cat}>{cat}</option>
+                                            ))}
+                                        </select>
+                                    </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="contact-email" className="block text-sm font-medium text-neutral-700 mb-1.5">Email</label>
-                                    <input
-                                        type="email"
-                                        id="contact-email"
-                                        name="email"
-                                        required
-                                        value={formData.email}
-                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all text-neutral-900 placeholder-neutral-400"
-                                        placeholder="you@example.com"
-                                        disabled={submitting}
-                                    />
-                                </div>
-
-                                <div>
-                                    <label htmlFor="contact-category" className="block text-sm font-medium text-neutral-700 mb-1.5">Inquiry Type</label>
-                                    <select
-                                        id="contact-category"
-                                        name="category"
-                                        required
-                                        value={formData.category}
-                                        onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all text-neutral-900"
-                                        disabled={submitting}
-                                    >
-                                        <option value="">Select a category</option>
-                                        {INQUIRY_CATEGORIES.map((cat) => (
-                                            <option key={cat} value={cat}>{cat}</option>
-                                        ))}
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label htmlFor="contact-message" className="block text-sm font-medium text-neutral-700 mb-1.5">Message</label>
+                                    <label htmlFor="contact-message" className="block text-sm font-medium text-neutral-700 mb-1.5">
+                                        Message <span className="text-red-500">*</span>
+                                    </label>
                                     <textarea
                                         id="contact-message"
                                         name="message"
@@ -198,7 +222,9 @@ export default function ContactPage() {
                         </form>
                     )}
 
-                    <p className="text-center text-sm text-neutral-500 mt-6">We look forward to connecting with you.</p>
+                    <p className="text-center text-xs text-neutral-500 mt-6">
+                        We typically respond within 1–2 business days. For urgent needs, call us directly.
+                    </p>
                 </div>
             </Section>
         </>
