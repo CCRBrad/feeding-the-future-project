@@ -7,33 +7,33 @@ import StructuredData from "@/components/seo/StructuredData";
 export const metadata = generatePageMetadata({
     title: "Our Impact",
     description:
-        "See how Feeding the Future Project turns community support into measurable action — families served, schools supported, volunteers engaged, and events delivered.",
+        "See how Feeding the Future Project is turning community support into measurable action — our 2026 goals for families, schools, volunteers, and events.",
     path: "/impact/",
 });
 
 const impactMetrics = [
     {
-        figure: "200+",
-        label: "Families Served",
-        desc: "Direct assistance including meals, supplies, referrals, and community resource connections since 2024.",
+        figure: "200",
+        label: "2026 Family Goal",
+        desc: "Our target for direct assistance including meals, supplies, referrals, and community resource connections in our first full year.",
         icon: "👨‍👩‍👧‍👦",
     },
     {
         figure: "5",
-        label: "School Partnerships",
-        desc: "Active collaborations with Title I schools in the Columbus metro area, providing on-site support and student resources.",
+        label: "2026 School Partnership Goal",
+        desc: "Planned collaborations with Title I schools in the greater Atlanta metro area, providing on-site support and student resources.",
         icon: "🏫",
     },
     {
         figure: "12",
-        label: "Community Events",
-        desc: "Service events, food drives, and partnership gatherings organized between 2024 and early 2026.",
+        label: "2026 Event Goal",
+        desc: "Service events, food drives, and partnership gatherings planned for our 2026 calendar.",
         icon: "🎉",
     },
     {
-        figure: "75+",
-        label: "Active Volunteers",
-        desc: "Community members who have contributed time, skills, and consistent effort to the mission.",
+        figure: "75",
+        label: "2026 Volunteer Goal",
+        desc: "Community members we aim to engage with their time, skills, and consistent effort toward the mission.",
         icon: "🙌",
     },
     {
@@ -43,9 +43,9 @@ const impactMetrics = [
         icon: "🤝",
     },
     {
-        figure: "$50K+",
-        label: "Resources Mobilized",
-        desc: "Combined value of donations, in-kind support, and community contributions channeled through the organization.",
+        figure: "$50K",
+        label: "2026 Resource Goal",
+        desc: "Target combined value of donations, in-kind support, and community contributions to fuel the mission.",
         icon: "💛",
     },
 ];
@@ -63,16 +63,16 @@ export default function ImpactPage() {
 
             <PageHero
                 title="Our Impact"
-                description="Impact matters because trust matters. We believe in showing results, not just talking about them. Here is a snapshot of the work so far."
+                description="Impact matters because trust matters. Founded in November 2025, here are the goals driving our first full year of operations."
                 primaryCta={{ label: "Support This Work", href: "/donate/" }}
             />
 
             {/* Impact Dashboard */}
             <Section className="bg-white">
                 <SectionHeader
-                    eyebrow="2024–2026 Impact Snapshot"
-                    title="Measurable Progress, Real Outcomes"
-                    description="These figures represent the cumulative impact of Feeding the Future Project from its founding through early 2026. We update this data as new milestones are reached."
+                    eyebrow="2026 Goals"
+                    title="Our Targets for Year One"
+                    description="Founded in November 2025, these figures represent our targets for 2026 — our first full year of operations. We will update this page as milestones are reached."
                 />
                 <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {impactMetrics.map((metric) => (
@@ -98,7 +98,7 @@ export default function ImpactPage() {
                     ))}
                 </div>
                 <p className="text-center text-xs text-neutral-500 mt-8">
-                    Figures reflect estimated cumulative impact as of March 2026. Data is reviewed and updated periodically.
+                    These are 2026 operational goals. Feeding the Future Project was founded in November 2025. Progress updates will be published as milestones are reached.
                 </p>
             </Section>
 
@@ -152,7 +152,7 @@ export default function ImpactPage() {
                             &ldquo;Feeding the Future Project didn&apos;t just bring supplies — they brought consistency. Our students know that someone is showing up for them.&rdquo;
                         </blockquote>
                         <p className="text-sm text-brand-700 font-medium">
-                            — Partner School Administrator, Columbus, GA
+                            — Partner School Administrator, Alpharetta, GA
                         </p>
                     </div>
                 </div>

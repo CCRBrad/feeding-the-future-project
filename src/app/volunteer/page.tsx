@@ -133,7 +133,7 @@ export default function VolunteerPage() {
                             &ldquo;I started volunteering because I wanted to do something that mattered. What I found was a team that actually shows up and serves with real purpose.&rdquo;
                         </blockquote>
                         <p className="text-sm text-brand-700 font-medium">
-                            — FTFP Volunteer, Columbus, GA
+                            — FTFP Volunteer, Alpharetta, GA
                         </p>
                     </div>
                 </div>

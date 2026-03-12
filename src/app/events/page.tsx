@@ -16,19 +16,19 @@ const pastEvents = [
     {
         title: "Back-to-School Supply Drive",
         date: "August 2025",
-        desc: "Provided school supplies to 50+ students across 3 partner schools in the Columbus metro area. Volunteers assembled and delivered personalized supply kits to each student.",
+        desc: "Our 2026 goal is to provide school supplies to 50+ students across partner schools in the greater Atlanta metro area. Volunteers will assemble and deliver personalized supply kits to each student.",
         image: "/images/events/community-1.jpg",
     },
     {
         title: "Holiday Family Support Event",
         date: "December 2025",
-        desc: "Delivered holiday meals and gift packages to 40 families identified through school and community partners. Volunteers prepared and personally delivered each package.",
+        desc: "Planning to deliver holiday meals and gift packages to 40 families identified through school and community partners. Volunteers will prepare and personally deliver each package.",
         image: "/images/events/community-2.jpg",
     },
     {
         title: "Community Partnership Day",
         date: "October 2025",
-        desc: "Mobilized 25+ volunteers for a day of on-site service at two local schools — classroom support, campus cleanup, and family engagement activities.",
+        desc: "A planned service day to mobilize 25+ volunteers for on-site support at partner schools — classroom support, campus cleanup, and family engagement activities.",
         image: "/images/events/braves-game.webp",
     },
 ];
@@ -54,9 +54,9 @@ export default function EventsPage() {
             <Section className="bg-white">
                 <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-6 mb-12">
                     {[
-                        { figure: "12", label: "Community Events Hosted" },
-                        { figure: "300+", label: "Total Participants" },
-                        { figure: "75+", label: "Volunteers Engaged" },
+                        { figure: "12", label: "2026 Event Goal" },
+                        { figure: "300", label: "2026 Participant Goal" },
+                        { figure: "75", label: "2026 Volunteer Goal" },
                     ].map((stat) => (
                         <div key={stat.label} className="text-center px-4 py-5 bg-brand-50 rounded-xl border border-brand-100">
                             <span className="text-2xl font-extrabold text-brand-900 block">{stat.figure}</span>

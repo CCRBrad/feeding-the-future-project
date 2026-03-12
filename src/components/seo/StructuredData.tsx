@@ -12,7 +12,7 @@ export default function StructuredData({ page, breadcrumbs }: StructuredDataProp
         name: SITE_NAME,
         url: SITE_URL,
         description: SITE_DESCRIPTION,
-        foundingDate: "2024",
+        foundingDate: "2025",
         sameAs: [],
         contactPoint: {
             "@type": "ContactPoint",

@@ -307,7 +307,7 @@ export default function ContactPage() {
                                 </svg>
                             </div>
                             <h3 className="font-semibold text-neutral-900 text-sm mb-1">Location</h3>
-                            <p className="text-sm text-neutral-600">Columbus, Georgia</p>
+                            <p className="text-sm text-neutral-600">Alpharetta, Georgia</p>
                         </div>
                         <div className="bg-neutral-50 rounded-xl p-6 border border-neutral-200/80">
                             <div className="w-10 h-10 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-3">

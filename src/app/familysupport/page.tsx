@@ -29,8 +29,8 @@ const faqs = [
         a: "Absolutely. Many families are connected to us through school counselors, teachers, churches, and community organizations. If you know a family that could use support, you can reach out on their behalf with their knowledge.",
     },
     {
-        q: "Is this only for families in Columbus, GA?",
-        a: "We primarily serve the Columbus, GA metro area. If you are outside this area, we are happy to help connect you with similar organizations closer to you.",
+        q: "Is this only for families in the Atlanta area?",
+        a: "We primarily serve the greater Atlanta metro area, including Alpharetta and surrounding communities. If you are outside this area, we are happy to help connect you with similar organizations closer to you.",
     },
     {
         q: "Do I need to meet any eligibility requirements?",

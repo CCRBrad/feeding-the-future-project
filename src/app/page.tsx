@@ -54,10 +54,10 @@ export default function HomePage() {
         />
         <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {[
-            { figure: "200+", label: "Families Served" },
-            { figure: "5", label: "School Partnerships" },
-            { figure: "75+", label: "Active Volunteers" },
-            { figure: "12", label: "Community Events" },
+            { figure: "200", label: "2026 Family Goal" },
+            { figure: "5", label: "2026 School Partnership Goal" },
+            { figure: "75", label: "2026 Volunteer Goal" },
+            { figure: "12", label: "2026 Event Goal" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -97,7 +97,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p className="font-semibold text-neutral-900 text-sm">School Counselor</p>
-                  <p className="text-xs text-neutral-500">Partner School, Columbus, GA</p>
+                  <p className="text-xs text-neutral-500">Partner School, Alpharetta, GA</p>
                 </div>
               </div>
             </div>

@@ -15,22 +15,22 @@ const partnershipTypes = [
     {
         title: "Student Resource Support",
         desc: "We provide supplies, meals, and essentials to students identified by school staff, helping remove barriers that affect attendance and performance.",
-        outcome: "500+ supply kits delivered since 2024",
+        outcome: "2026 goal: 500 supply kits",
     },
     {
         title: "Family Outreach",
         desc: "Through school referrals, we connect families with community resources — food assistance, utility support, and local services.",
-        outcome: "200+ families connected with support services",
+        outcome: "2026 goal: connect 200 families with support",
     },
     {
         title: "On-Site Volunteer Presence",
         desc: "Our volunteers can support school events, parent nights, and campus activities, adding capacity without adding cost.",
-        outcome: "75+ volunteers deployed to partner schools",
+        outcome: "2026 goal: deploy 75 volunteers to schools",
     },
     {
         title: "Community Event Collaboration",
         desc: "We co-organize back-to-school drives, holiday support events, and service days that bring school communities together.",
-        outcome: "12 collaborative events hosted",
+        outcome: "2026 goal: host 12 collaborative events",
     },
 ];
 
@@ -45,7 +45,7 @@ const faqs = [
     },
     {
         q: "What types of schools do you partner with?",
-        a: "We primarily partner with Title I and community schools in the Columbus, GA metro area, but we are open to conversations with any school serving families who could benefit from additional community support.",
+        a: "We primarily partner with Title I and community schools in the greater Atlanta metro area, but we are open to conversations with any school serving families who could benefit from additional community support.",
     },
     {
         q: "How quickly can a partnership begin?",
@@ -70,22 +70,22 @@ export default function SchoolsPage() {
 
             <PageHero
                 title="Partner With Us Through Your School"
-                description="Schools are where support meets students and families every day. We build partnerships with schools in the Columbus, GA metro area that are practical, respectful, and focused on real outcomes."
+                description="Schools are where support meets students and families every day. We build partnerships with schools in the greater Atlanta metro area that are practical, respectful, and focused on real outcomes."
                 primaryCta={{ label: "Start a Conversation", href: "/contact/" }}
             />
 
             {/* Partnership Track Record */}
             <Section className="bg-white">
-                <SectionHeader eyebrow="Our Track Record" title="5 Active School Partnerships Since 2024" />
+                <SectionHeader eyebrow="Our Goals" title="Building School Partnerships in 2026" />
                 <div className="max-w-3xl mx-auto">
                     <p className="text-lg text-neutral-600 leading-relaxed mb-8 text-center">
-                        Since our founding in 2024, we have built trusted partnerships with schools across the Columbus, GA metro area. Each partnership is built on consistent follow-through, respectful communication, and practical support that makes a real difference for students and families.
+                        Since our founding in November 2025, we are building trusted partnerships with schools across the greater Atlanta metro area. Each partnership is built on consistent follow-through, respectful communication, and practical support that makes a real difference for students and families.
                     </p>
                     <div className="grid sm:grid-cols-3 gap-4">
                         {[
                             { figure: "5", label: "Active Partnerships" },
-                            { figure: "500+", label: "Supply Kits Delivered" },
-                            { figure: "200+", label: "Families Reached" },
+                            { figure: "500", label: "2026 Supply Kit Goal" },
+                            { figure: "200", label: "2026 Family Goal" },
                         ].map((stat) => (
                             <div key={stat.label} className="text-center px-4 py-5 bg-brand-50 rounded-xl border border-brand-100">
                                 <span className="text-2xl font-extrabold text-brand-900 block">{stat.figure}</span>
@@ -162,7 +162,7 @@ export default function SchoolsPage() {
                             </div>
                             <div>
                                 <p className="font-semibold text-neutral-900 text-sm">Elementary School Administrator</p>
-                                <p className="text-xs text-neutral-500">Partner School, Columbus, GA</p>
+                                <p className="text-xs text-neutral-500">Partner School, Alpharetta, GA</p>
                             </div>
                         </div>
                     </div>

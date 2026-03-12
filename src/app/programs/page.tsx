@@ -38,7 +38,7 @@ export default function ProgramsPage() {
                             </svg>
                         }
                         title="Family Support"
-                        description="Direct support including meals, supplies, referrals, and community connections for families identified through school partners and community outreach. 200+ families served since 2024."
+                        description="Direct support including meals, supplies, referrals, and community connections for families identified through school partners and community outreach. 2026 goal: serve 200 families."
                         href="/familysupport/"
                     />
                     <Card
@@ -58,7 +58,7 @@ export default function ProgramsPage() {
                             </svg>
                         }
                         title="Community Engagement"
-                        description="Service events, food drives, volunteer mobilization, and partnership gatherings that bring people together. 12 events hosted, 300+ participants engaged."
+                        description="Service events, food drives, volunteer mobilization, and partnership gatherings that bring people together. 2026 goal: 12 events, 300 participants."
                         href="/events/"
                     />
                 </div>

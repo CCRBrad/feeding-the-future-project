@@ -7,7 +7,7 @@ import StructuredData from "@/components/seo/StructuredData";
 export const metadata = generatePageMetadata({
     title: "About Feeding the Future Project",
     description:
-        "Founded in Columbus, GA, Feeding the Future Project is a 501(c)(3) nonprofit serving families, supporting students, and strengthening community through practical action.",
+        "Founded in Alpharetta, GA, Feeding the Future Project is a 501(c)(3) nonprofit serving families, supporting students, and strengthening community through practical action.",
     path: "/about/",
 });
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
 
             <PageHero
                 title="About Feeding the Future Project"
-                description="A 501(c)(3) nonprofit organization based in Columbus, Georgia, built to serve children, families, and the broader community through practical support, trusted relationships, and mission-driven action."
+                description="A 501(c)(3) nonprofit organization based in Alpharetta, Georgia, serving the greater Atlanta metro area through practical support, trusted relationships, and mission-driven action."
             />
 
             {/* Origin Story */}
@@ -37,10 +37,10 @@ export default function AboutPage() {
                     />
                     <div className="space-y-4">
                         <p className="text-neutral-600 leading-relaxed text-lg">
-                            Feeding the Future Project was founded with a clear conviction: when communities invest in children and families with practical, consistent support, outcomes change. Not just for individuals, but for entire neighborhoods.
+                            Feeding the Future Project was founded in November 2025 with a clear conviction: when communities invest in children and families with practical, consistent support, outcomes change. Not just for individuals, but for entire neighborhoods.
                         </p>
                         <p className="text-neutral-600 leading-relaxed text-lg">
-                            What started as grassroots volunteer work — delivering supplies, organizing food drives, and showing up at local schools — has grown into a structured nonprofit organization with school partnerships, active volunteer teams, community events, and measurable impact across the Columbus metro area.
+                            What started as grassroots volunteer work — delivering supplies, organizing food drives, and showing up at local schools — is growing into a structured nonprofit organization with school partnerships, active volunteer teams, community events, and measurable impact across the greater Atlanta metro area.
                         </p>
                         <p className="text-neutral-600 leading-relaxed text-lg">
                             We are not trying to be the biggest organization in the room. We are trying to be the most reliable, the most present, and the most practical.
@@ -57,10 +57,10 @@ export default function AboutPage() {
                 />
                 <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {[
-                        { figure: "2024", label: "Year Founded" },
-                        { figure: "200+", label: "Families Served" },
-                        { figure: "5", label: "School Partnerships" },
-                        { figure: "75+", label: "Active Volunteers" },
+                        { figure: "2025", label: "Year Founded" },
+                        { figure: "200", label: "2026 Family Goal" },
+                        { figure: "5", label: "2026 School Partnership Goal" },
+                        { figure: "75", label: "2026 Volunteer Goal" },
                     ].map((stat) => (
                         <div key={stat.label} className="text-center px-4 py-6 bg-white rounded-2xl border border-brand-100">
                             <span className="text-3xl sm:text-4xl font-extrabold text-brand-900 block">{stat.figure}</span>
