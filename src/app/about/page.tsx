@@ -24,7 +24,7 @@ export default function AboutPage() {
 
             <PageHero
                 title="About Feeding the Future Project"
-                description="A 501(c)(3) nonprofit organization based in Alpharetta, Georgia, serving the greater Atlanta metro area through practical support, trusted relationships, and mission-driven action."
+                description="A 501(c)(3) nonprofit organization founded in Alpharetta, Georgia, dedicated to serving families, supporting students, and strengthening community through practical support, trusted relationships, and mission-driven action."
             />
 
             {/* Origin Story */}
@@ -40,7 +40,7 @@ export default function AboutPage() {
                             Feeding the Future Project was founded in November 2025 with a clear conviction: when communities invest in children and families with practical, consistent support, outcomes change. Not just for individuals, but for entire neighborhoods.
                         </p>
                         <p className="text-neutral-600 leading-relaxed text-lg">
-                            What started as grassroots volunteer work — delivering supplies, organizing food drives, and showing up at local schools — is growing into a structured nonprofit organization with school partnerships, active volunteer teams, community events, and measurable impact across the greater Atlanta metro area.
+                            What started as grassroots volunteer work — delivering supplies, organizing food drives, and showing up at local schools — is growing into a structured nonprofit organization with school partnerships, active volunteer teams, community events, and measurable impact.
                         </p>
                         <p className="text-neutral-600 leading-relaxed text-lg">
                             We are not trying to be the biggest organization in the room. We are trying to be the most reliable, the most present, and the most practical.

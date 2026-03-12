@@ -21,7 +21,7 @@ const impactMetrics = [
     {
         figure: "5",
         label: "2026 School Partnership Goal",
-        desc: "Planned collaborations with Title I schools in the greater Atlanta metro area, providing on-site support and student resources.",
+        desc: "Planned collaborations with Title I schools, providing on-site support and student resources.",
         icon: "🏫",
     },
     {
@@ -154,6 +154,54 @@ export default function ImpactPage() {
                         <p className="text-sm text-brand-700 font-medium">
                             — Partner School Administrator, Alpharetta, GA
                         </p>
+                    </div>
+                </div>
+            </Section>
+
+            {/* Milestones & Progress */}
+            <Section className="bg-neutral-50">
+                <SectionHeader
+                    eyebrow="Milestones"
+                    title="Progress to Date"
+                    description="As a newly founded organization, we are tracking milestones as we grow. This section will be updated as goals are reached."
+                />
+                <div className="max-w-3xl mx-auto">
+                    <div className="space-y-4">
+                        {[
+                            { date: "November 2025", milestone: "Organization founded as a 501(c)(3) in Alpharetta, Georgia" },
+                            { date: "December 2025", milestone: "Website launched and initial community outreach began" },
+                            { date: "Q1 2026", milestone: "First school partnership conversations initiated" },
+                        ].map((item) => (
+                            <div key={item.date} className="flex gap-4 items-start bg-white rounded-xl p-5 border border-neutral-200/80">
+                                <span className="text-xs font-semibold text-brand-700 bg-brand-50 px-3 py-1.5 rounded-full flex-shrink-0 mt-0.5">
+                                    {item.date}
+                                </span>
+                                <p className="text-sm text-neutral-700">{item.milestone}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="text-xs text-neutral-500 mt-6 text-center">
+                        We will add milestones here as they are verified. Our goal is honest, grounded reporting — not inflated claims.
+                    </p>
+                </div>
+            </Section>
+
+            {/* Reporting Cadence */}
+            <Section className="bg-white">
+                <div className="max-w-3xl mx-auto text-center">
+                    <SectionHeader
+                        eyebrow="Reporting Cadence"
+                        title="When We Report"
+                    />
+                    <p className="text-neutral-600 leading-relaxed mb-6">
+                        We publish impact updates on a quarterly basis. Each update covers families supported, events held, volunteer engagement, and partnership outcomes. Donors and partners can request detailed reports at any time.
+                    </p>
+                    <div className="grid sm:grid-cols-4 gap-4">
+                        {["Q1 — April", "Q2 — July", "Q3 — October", "Q4 — January"].map((quarter) => (
+                            <div key={quarter} className="bg-brand-50 rounded-lg px-4 py-3 border border-brand-100 text-sm font-medium text-brand-800">
+                                {quarter}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </Section>

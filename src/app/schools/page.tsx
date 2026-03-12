@@ -45,7 +45,7 @@ const faqs = [
     },
     {
         q: "What types of schools do you partner with?",
-        a: "We primarily partner with Title I and community schools in the greater Atlanta metro area, but we are open to conversations with any school serving families who could benefit from additional community support.",
+        a: "We primarily partner with Title I and community schools in our local area, but we are open to conversations with any school serving families who could benefit from additional community support.",
     },
     {
         q: "How quickly can a partnership begin?",
@@ -70,7 +70,7 @@ export default function SchoolsPage() {
 
             <PageHero
                 title="Partner With Us Through Your School"
-                description="Schools are where support meets students and families every day. We build partnerships with schools in the greater Atlanta metro area that are practical, respectful, and focused on real outcomes."
+                description="Schools are where support meets students and families every day. We build partnerships with schools that are practical, respectful, and focused on real outcomes."
                 primaryCta={{ label: "Start a Conversation", href: "/contact/" }}
             />
 
@@ -79,7 +79,7 @@ export default function SchoolsPage() {
                 <SectionHeader eyebrow="Our Goals" title="Building School Partnerships in 2026" />
                 <div className="max-w-3xl mx-auto">
                     <p className="text-lg text-neutral-600 leading-relaxed mb-8 text-center">
-                        Since our founding in November 2025, we are building trusted partnerships with schools across the greater Atlanta metro area. Each partnership is built on consistent follow-through, respectful communication, and practical support that makes a real difference for students and families.
+                        Since our founding in November 2025, we are building trusted partnerships with schools in and around Alpharetta, Georgia. Each partnership is built on consistent follow-through, respectful communication, and practical support that makes a real difference for students and families.
                     </p>
                     <div className="grid sm:grid-cols-3 gap-4">
                         {[

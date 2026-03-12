@@ -12,7 +12,13 @@ export default function StructuredData({ page, breadcrumbs }: StructuredDataProp
         name: SITE_NAME,
         url: SITE_URL,
         description: SITE_DESCRIPTION,
-        foundingDate: "2025",
+        foundingDate: "2025-11",
+        address: {
+            "@type": "PostalAddress",
+            addressLocality: "Alpharetta",
+            addressRegion: "GA",
+            addressCountry: "US",
+        },
         sameAs: [],
         contactPoint: {
             "@type": "ContactPoint",

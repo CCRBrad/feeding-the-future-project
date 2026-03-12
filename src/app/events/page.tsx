@@ -16,7 +16,7 @@ const pastEvents = [
     {
         title: "Back-to-School Supply Drive",
         date: "August 2025",
-        desc: "Our 2026 goal is to provide school supplies to 50+ students across partner schools in the greater Atlanta metro area. Volunteers will assemble and deliver personalized supply kits to each student.",
+        desc: "Our 2026 goal is to provide school supplies to 50+ students across partner schools. Volunteers will assemble and deliver personalized supply kits to each student.",
         image: "/images/events/community-1.jpg",
     },
     {
@@ -138,7 +138,7 @@ export default function EventsPage() {
 
             {/* Past Events */}
             <Section className="bg-neutral-50">
-                <SectionHeader eyebrow="Recent Highlights" title="Past Events" />
+                <SectionHeader eyebrow="Event Plans" title="Planned Events" />
                 <div className="max-w-4xl mx-auto space-y-6">
                     {pastEvents.map((event) => (
                         <div key={event.title} className="bg-white rounded-2xl border border-neutral-200/80 overflow-hidden sm:flex">

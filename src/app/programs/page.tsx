@@ -87,7 +87,7 @@ export default function ProgramsPage() {
                             <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">School Partnerships</h2>
                             <p className="text-neutral-600 leading-relaxed mb-6">
                                 Schools are where we meet students and families where they already are. We build structured
-                                partnerships with Title I and community schools in the greater Atlanta metro area — providing
+                                partnerships with Title I and community schools — providing
                                 on-site resources, volunteer support, family outreach, and collaborative events that extend
                                 each school&apos;s ability to serve its community.
                             </p>

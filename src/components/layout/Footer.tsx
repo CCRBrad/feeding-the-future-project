@@ -44,7 +44,7 @@ export default function Footer() {
                             />
                         </Link>
                         <p className="mt-4 text-sm text-neutral-400 leading-relaxed max-w-xs">
-                            Serving families, supporting students, and strengthening our community
+                            A community-centered nonprofit founded in Alpharetta, Georgia — serving families, supporting students, and strengthening our community
                             through practical action, trusted partnerships, and real care.
                         </p>
                     </div>

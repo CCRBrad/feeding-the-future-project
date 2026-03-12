@@ -33,7 +33,7 @@ export default function PrivacyPage() {
 
                     <h2 className="text-xl font-bold text-neutral-900 mt-8 mb-3">Who We Are</h2>
                     <p className="text-neutral-600 leading-relaxed mb-4">
-                        {SITE_NAME} is a 501(c)(3) nonprofit organization based in Alpharetta, Georgia, serving the greater Atlanta metro area.
+                        {SITE_NAME} is a 501(c)(3) nonprofit organization founded in Alpharetta, Georgia.
                         This privacy policy describes how we collect, use, and protect information gathered through our website at feedingthefutureproject.org.
                     </p>
 

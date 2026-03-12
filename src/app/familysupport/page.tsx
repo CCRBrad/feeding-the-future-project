@@ -30,7 +30,7 @@ const faqs = [
     },
     {
         q: "Is this only for families in the Atlanta area?",
-        a: "We primarily serve the greater Atlanta metro area, including Alpharetta and surrounding communities. If you are outside this area, we are happy to help connect you with similar organizations closer to you.",
+        a: "We primarily serve families in Alpharetta, Georgia and surrounding communities. If you are outside this area, we are happy to help connect you with similar organizations closer to you.",
     },
     {
         q: "Do I need to meet any eligibility requirements?",
