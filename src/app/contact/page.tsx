@@ -32,10 +32,25 @@ export default function ContactPage() {
         setSubmitting(true);
 
         try {
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || "Something went wrong.");
+            }
+
             setSubmitted(true);
-        } catch {
-            setError("Something went wrong. Please try again or email us directly at info@feedingthefutureproject.org.");
+        } catch (err) {
+            setError(
+                err instanceof Error
+                    ? err.message
+                    : "Something went wrong. Please try again or email us directly at feedingthefutureproject@capitalcityroofing.net."
+            );
         } finally {
             setSubmitting(false);
         }
@@ -280,8 +295,8 @@ export default function ContactPage() {
                                 </svg>
                             </div>
                             <h3 className="font-semibold text-neutral-900 text-sm mb-1">Email</h3>
-                            <a href="mailto:info@feedingthefutureproject.org" className="text-sm text-brand-600 hover:text-brand-700 underline underline-offset-2">
-                                info@feedingthefutureproject.org
+                            <a href="mailto:feedingthefutureproject@capitalcityroofing.net" className="text-sm text-brand-600 hover:text-brand-700 underline underline-offset-2 break-all">
+                                feedingthefutureproject@capitalcityroofing.net
                             </a>
                         </div>
                         <div className="bg-neutral-50 rounded-xl p-6 border border-neutral-200/80">
