@@ -16,19 +16,19 @@ const pastEvents = [
     {
         title: "Back-to-School Supply Drive",
         date: "August 2025",
-        desc: "Provided school supplies to 50+ students across 3 partner schools in the Columbus metro area.",
+        desc: "Provided school supplies to 50+ students across 3 partner schools in the Columbus metro area. Volunteers assembled and delivered personalized supply kits to each student.",
         image: "/images/events/community-1.jpg",
     },
     {
         title: "Holiday Family Support Event",
         date: "December 2025",
-        desc: "Delivered holiday meals and gift packages to 40 families identified through school and community partners.",
+        desc: "Delivered holiday meals and gift packages to 40 families identified through school and community partners. Volunteers prepared and personally delivered each package.",
         image: "/images/events/community-2.jpg",
     },
     {
         title: "Community Partnership Day",
         date: "October 2025",
-        desc: "Mobilized 25+ volunteers for a day of on-site service at two local schools — classroom support, campus cleanup, and family engagement.",
+        desc: "Mobilized 25+ volunteers for a day of on-site service at two local schools — classroom support, campus cleanup, and family engagement activities.",
         image: "/images/events/braves-game.webp",
     },
 ];
@@ -50,17 +50,30 @@ export default function EventsPage() {
                 primaryCta={{ label: "Get Involved", href: "/contact/" }}
             />
 
-            {/* Why Events Matter */}
+            {/* Event Impact Stats */}
             <Section className="bg-white">
+                <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-6 mb-12">
+                    {[
+                        { figure: "12", label: "Community Events Hosted" },
+                        { figure: "300+", label: "Total Participants" },
+                        { figure: "75+", label: "Volunteers Engaged" },
+                    ].map((stat) => (
+                        <div key={stat.label} className="text-center px-4 py-5 bg-brand-50 rounded-xl border border-brand-100">
+                            <span className="text-2xl font-extrabold text-brand-900 block">{stat.figure}</span>
+                            <span className="text-sm font-medium text-brand-700 mt-1 block">{stat.label}</span>
+                        </div>
+                    ))}
+                </div>
+
                 <SectionHeader
                     eyebrow="Why Events Matter"
                     title="Gather Around Meaningful Action"
                 />
                 <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-6">
                     {[
-                        { title: "Build Community", desc: "Events bring together volunteers, donors, families, and school partners in one place." },
-                        { title: "Deliver Support", desc: "Every event is designed to deliver tangible value — supplies, meals, or direct service." },
-                        { title: "Create Momentum", desc: "Consistent events build trust, visibility, and long-term community engagement." },
+                        { title: "Build Community", desc: "Events bring together volunteers, donors, families, and school partners in one place — strengthening the relationships that make everything else possible." },
+                        { title: "Deliver Tangible Support", desc: "Every event is designed to deliver real value — supplies, meals, or direct service — not just awareness." },
+                        { title: "Create Momentum", desc: "Consistent events build trust, visibility, and long-term engagement. People come back because they see results." },
                     ].map((item) => (
                         <div key={item.title} className="bg-neutral-50 rounded-xl p-6 border border-neutral-200/80">
                             <h3 className="font-semibold text-neutral-900 mb-2">{item.title}</h3>
@@ -70,15 +83,53 @@ export default function EventsPage() {
                 </div>
             </Section>
 
-            {/* Upcoming Events */}
+            {/* How to Participate */}
             <Section className="bg-neutral-50">
+                <SectionHeader eyebrow="Get Involved" title="How to Participate" />
+                <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    {[
+                        {
+                            title: "Attend",
+                            desc: "Show up, bring your family, and be part of the community. All events are free and open to the public.",
+                            icon: "🎪",
+                        },
+                        {
+                            title: "Volunteer",
+                            desc: "Help with setup, distribution, outreach, or cleanup. We provide all training and materials — just bring yourself.",
+                            icon: "🙋",
+                        },
+                        {
+                            title: "Sponsor",
+                            desc: "Cover the cost of an event or specific supplies. We will recognize your support and share the impact with you.",
+                            icon: "💼",
+                        },
+                        {
+                            title: "Donate Supplies",
+                            desc: "Contribute food, school supplies, hygiene products, or other essentials directly to an upcoming event.",
+                            icon: "📦",
+                        },
+                    ].map((item) => (
+                        <div key={item.title} className="bg-white rounded-xl p-6 border border-neutral-200/80 hover:border-brand-200 hover:shadow-md transition-all text-center">
+                            <div className="text-3xl mb-3"><span role="img" aria-hidden="true">{item.icon}</span></div>
+                            <h3 className="font-semibold text-neutral-900 mb-2">{item.title}</h3>
+                            <p className="text-xs text-neutral-600 leading-relaxed">{item.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </Section>
+
+            {/* Upcoming Events */}
+            <Section className="bg-white">
                 <SectionHeader eyebrow="Coming Up" title="Upcoming Events" />
                 <div className="max-w-2xl mx-auto text-center">
-                    <div className="bg-white rounded-2xl border border-neutral-200/80 p-8 sm:p-12">
+                    <div className="bg-gradient-to-br from-brand-50 to-warm-50 rounded-2xl border border-brand-200 p-8 sm:p-12">
                         <div className="text-4xl mb-4"><span role="img" aria-hidden="true">📅</span></div>
                         <h3 className="text-lg font-semibold text-neutral-900 mb-2">Spring 2026 Events Coming Soon</h3>
-                        <p className="text-neutral-600 mb-6">
-                            We are currently planning spring events including a community food drive and volunteer appreciation day. Check back soon or contact us to get notified.
+                        <p className="text-neutral-600 mb-3">
+                            We are currently planning spring events including a community food drive and volunteer appreciation day.
+                        </p>
+                        <p className="text-sm text-neutral-500 mb-6">
+                            Get notified when dates and details are confirmed — we will send you just one email, no spam.
                         </p>
                         <Button href="/contact/" variant="primary">Get Notified About Events</Button>
                     </div>
@@ -86,11 +137,11 @@ export default function EventsPage() {
             </Section>
 
             {/* Past Events */}
-            <Section className="bg-white">
+            <Section className="bg-neutral-50">
                 <SectionHeader eyebrow="Recent Highlights" title="Past Events" />
                 <div className="max-w-4xl mx-auto space-y-6">
                     {pastEvents.map((event) => (
-                        <div key={event.title} className="bg-neutral-50 rounded-2xl border border-neutral-200/80 overflow-hidden sm:flex">
+                        <div key={event.title} className="bg-white rounded-2xl border border-neutral-200/80 overflow-hidden sm:flex">
                             <div className="sm:w-48 sm:flex-shrink-0">
                                 <Image
                                     src={event.image}
@@ -115,11 +166,14 @@ export default function EventsPage() {
             </Section>
 
             {/* CTA */}
-            <Section className="bg-brand-50/50">
+            <Section className="bg-brand-900">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">Want to Support or Attend an Event?</h2>
-                    <p className="text-lg text-neutral-600 mb-6">We welcome volunteers, sponsors, and participants at every event.</p>
-                    <Button href="/contact/" variant="primary">Contact Us About Events</Button>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Want to Support or Attend an Event?</h2>
+                    <p className="text-lg text-brand-200 mb-8">We welcome volunteers, sponsors, and participants at every event. Let us know how you would like to be involved.</p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Button href="/contact/" variant="primary">Contact Us About Events</Button>
+                        <Button href="/volunteer/" variant="outline">Join as a Volunteer</Button>
+                    </div>
                 </div>
             </Section>
         </>

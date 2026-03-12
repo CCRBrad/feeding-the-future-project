@@ -2,6 +2,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 import { SITE_NAME } from "@/lib/constants";
 import { Section, SectionHeader, Button, Card } from "@/components/ui";
 import StructuredData from "@/components/seo/StructuredData";
+import Image from "next/image";
 
 export const metadata = generatePageMetadata({
   title: `${SITE_NAME} — Strengthening Our Community`,
@@ -45,7 +46,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Impact Snapshot — replaces the old generic mission section */}
+      {/* Impact Snapshot */}
       <Section className="bg-white">
         <SectionHeader
           eyebrow="Our Impact So Far"
@@ -77,6 +78,81 @@ export default function HomePage() {
           </Button>
         </div>
       </Section>
+
+      {/* Community Proof — testimonial + stewardship */}
+      <Section className="bg-neutral-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            {/* Testimonial */}
+            <div className="bg-white rounded-2xl p-8 sm:p-10 border border-neutral-200/80 shadow-sm">
+              <svg className="w-8 h-8 text-brand-300 mb-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
+              </svg>
+              <blockquote className="text-lg text-neutral-700 leading-relaxed mb-6 italic">
+                &ldquo;Feeding the Future Project has been a consistent and reliable partner for our school. They show up when they say they will, they treat our families with dignity, and they help us extend our reach into the community. That kind of partnership is rare.&rdquo;
+              </blockquote>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
+                  <span className="text-brand-700 font-bold text-sm">SC</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-neutral-900 text-sm">School Counselor</p>
+                  <p className="text-xs text-neutral-500">Partner School, Columbus, GA</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Stewardship Promise */}
+            <div>
+              <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Our Promise</p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">
+                Every Dollar Tracked. Every Outcome Measured.
+              </h3>
+              <p className="text-neutral-600 leading-relaxed mb-6">
+                We believe accountability is the foundation of trust. Every contribution is stewarded with care, every program outcome is measured and reviewed quarterly, and every family we serve is treated with dignity and respect.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Quarterly impact reports published openly",
+                  "Direct-to-program resource allocation",
+                  "School-verified partnership outcomes",
+                  "Donor-accessible reporting on request",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-neutral-700">
+                    <svg className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Community Photo Strip */}
+      <section className="bg-white py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4">
+            {[
+              { src: "/images/community-volunteers.png", alt: "Volunteers sorting school supplies for students" },
+              { src: "/images/community-food-drive.png", alt: "Community food drive serving families" },
+              { src: "/images/school-partnership.png", alt: "School partnership coordination" },
+            ].map((img) => (
+              <div key={img.src} className="aspect-[4/3] relative rounded-xl overflow-hidden">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 33vw, 400px"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* How We Help */}
       <Section className="bg-neutral-50">
@@ -157,7 +233,25 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Single Donation CTA — removed second duplicate */}
+      {/* Final CTA */}
+      <Section className="bg-brand-900">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Help Us Feed the Future
+          </h2>
+          <p className="text-brand-200 text-lg mb-8 leading-relaxed">
+            Every gift, every volunteer hour, and every partnership makes a real difference in the lives of families and students in our community.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button href="/donate/" variant="primary" size="lg">
+              Donate Now
+            </Button>
+            <Button href="/contact/" variant="outline" size="lg">
+              Get in Touch
+            </Button>
+          </div>
+        </div>
+      </Section>
     </>
   );
 }

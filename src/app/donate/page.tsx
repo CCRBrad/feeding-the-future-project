@@ -124,8 +124,8 @@ export default function DonatePage() {
                 <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-6">
                     {[
                         {
-                            title: "100% Mission-Directed",
-                            desc: "Your donations go directly toward programs, supplies, events, and community partnerships — not overhead.",
+                            title: "Mission-Focused Stewardship",
+                            desc: "We steward every gift carefully and direct resources toward mission delivery — programs, supplies, events, and community partnerships.",
                         },
                         {
                             title: "Transparent Reporting",

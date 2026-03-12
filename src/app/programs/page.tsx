@@ -38,7 +38,7 @@ export default function ProgramsPage() {
                             </svg>
                         }
                         title="Family Support"
-                        description="Direct support including meals, supplies, referrals, and community connections for families identified through school partners and community outreach."
+                        description="Direct support including meals, supplies, referrals, and community connections for families identified through school partners and community outreach. 200+ families served since 2024."
                         href="/familysupport/"
                     />
                     <Card
@@ -48,7 +48,7 @@ export default function ProgramsPage() {
                             </svg>
                         }
                         title="School Partnerships"
-                        description="Structured partnerships with Title I schools — providing on-site resources, volunteer support, family outreach, and collaborative events."
+                        description="Structured partnerships with Title I schools — providing on-site resources, volunteer support, family outreach, and collaborative events. 5 active partnerships."
                         href="/schools/"
                     />
                     <Card
@@ -58,25 +58,59 @@ export default function ProgramsPage() {
                             </svg>
                         }
                         title="Community Engagement"
-                        description="Service events, food drives, volunteer mobilization, and partnership gatherings that bring people together to strengthen the community."
+                        description="Service events, food drives, volunteer mobilization, and partnership gatherings that bring people together. 12 events hosted, 300+ participants engaged."
                         href="/events/"
                     />
                 </div>
             </Section>
 
+            {/* Program Principles */}
+            <Section className="bg-brand-50/50">
+                <SectionHeader
+                    eyebrow="What Sets Us Apart"
+                    title="Our Program Principles"
+                    description="These principles guide every program decision we make and every interaction we have with the families and communities we serve."
+                />
+                <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+                    {[
+                        {
+                            title: "Dignity First",
+                            desc: "Every family and individual we serve is treated with respect, confidentiality, and care. We never make people feel like a case number. Support is delivered with warmth, not paperwork.",
+                            icon: "💜",
+                        },
+                        {
+                            title: "School-Referred",
+                            desc: "Our primary referral pathway is through school partners who already know their students and families. This means support reaches the people who need it most, through people they already trust.",
+                            icon: "🏫",
+                        },
+                        {
+                            title: "Community-Powered",
+                            desc: "Everything we do is made possible by local volunteers, donors, and partners. We believe the best solutions come from the community itself — we just help organize and deliver them.",
+                            icon: "🤝",
+                        },
+                    ].map((item) => (
+                        <div key={item.title} className="bg-white rounded-2xl p-6 sm:p-8 border border-brand-100 text-center">
+                            <div className="text-3xl mb-4"><span role="img" aria-hidden="true">{item.icon}</span></div>
+                            <h3 className="font-bold text-neutral-900 text-lg mb-3">{item.title}</h3>
+                            <p className="text-sm text-neutral-600 leading-relaxed">{item.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </Section>
+
             {/* How Programs Work */}
-            <Section className="bg-neutral-50">
+            <Section className="bg-white">
                 <SectionHeader
                     eyebrow="Our Approach"
                     title="How Our Programs Work"
                 />
                 <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-6">
                     {[
-                        { title: "Identify Needs", desc: "We work with schools and community leaders to identify where support is needed most." },
-                        { title: "Mobilize Resources", desc: "We connect donors, volunteers, and partners with specific, actionable opportunities." },
-                        { title: "Deliver & Measure", desc: "We deliver support, track results, and report outcomes to maintain trust and improve." },
+                        { title: "Identify Needs", desc: "We work with schools and community leaders to identify where support is needed most — not through guesswork, but through trusted relationships and referrals." },
+                        { title: "Mobilize Resources", desc: "We connect donors, volunteers, and partners with specific, actionable opportunities. Every resource is matched to a real, identified need." },
+                        { title: "Deliver & Measure", desc: "We deliver support, track results, and report outcomes quarterly. This keeps us accountable and helps us improve continuously." },
                     ].map((item) => (
-                        <div key={item.title} className="bg-white rounded-xl p-6 border border-neutral-200/80 text-center">
+                        <div key={item.title} className="bg-neutral-50 rounded-xl p-6 border border-neutral-200/80 text-center">
                             <h3 className="font-semibold text-neutral-900 mb-2">{item.title}</h3>
                             <p className="text-sm text-neutral-600 leading-relaxed">{item.desc}</p>
                         </div>
@@ -84,15 +118,53 @@ export default function ProgramsPage() {
                 </div>
             </Section>
 
+            {/* Operating Model */}
+            <Section className="bg-neutral-50">
+                <SectionHeader eyebrow="How We Operate" title="Built for Accountability" />
+                <div className="max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 border border-neutral-200/80">
+                    <div className="space-y-6">
+                        {[
+                            {
+                                title: "Referral-Based Intake",
+                                desc: "Families are connected to us through school partners, community organizations, and direct outreach — ensuring support reaches those who need it through trusted channels.",
+                            },
+                            {
+                                title: "Quarterly Impact Reviews",
+                                desc: "Every quarter, we review program outcomes, volunteer engagement, financial stewardship, and partnership effectiveness. Results are shared with donors and partners.",
+                            },
+                            {
+                                title: "Volunteer-Driven Delivery",
+                                desc: "Our 75+ active volunteers are the backbone of program delivery. We invest in training, communication, and meaningful volunteer experiences to maintain quality and consistency.",
+                            },
+                            {
+                                title: "Transparent Financials",
+                                desc: "As a 501(c)(3), we steward every dollar with care. Donors can request detailed information about how their contributions are used at any time.",
+                            },
+                        ].map((item) => (
+                            <div key={item.title} className="flex gap-4">
+                                <div className="w-2 h-2 bg-brand-500 rounded-full flex-shrink-0 mt-2.5" />
+                                <div>
+                                    <h3 className="font-semibold text-neutral-900 mb-1">{item.title}</h3>
+                                    <p className="text-sm text-neutral-600 leading-relaxed">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </Section>
+
             {/* CTA */}
-            <Section className="bg-white">
+            <Section className="bg-brand-900">
                 <div className="max-w-3xl mx-auto text-center">
-                    <p className="text-lg text-neutral-600 mb-6">
-                        Want to learn more about our programs or explore how to get involved?
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        See the Impact in Action
+                    </h2>
+                    <p className="text-lg text-brand-200 mb-8">
+                        Want to learn more about our programs or explore how to get involved? We welcome the conversation.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Button href="/contact/" variant="primary">Contact Us</Button>
-                        <Button href="/impact/" variant="secondary">See Our Impact</Button>
+                        <Button href="/impact/" variant="outline">See Our Impact</Button>
                     </div>
                 </div>
             </Section>
