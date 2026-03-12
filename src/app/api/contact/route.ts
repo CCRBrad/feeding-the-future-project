@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "brad@capitalcityroofing.net";
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "feedingthefutureproject@capitalcityroofing.net";
 
 export async function POST(request: Request) {
     try {
@@ -57,7 +57,7 @@ export async function POST(request: Request) {
         const resend = new Resend(process.env.RESEND_API_KEY);
 
         const { error } = await resend.emails.send({
-            from: "Feeding the Future Project <onboarding@resend.dev>",
+            from: "Feeding the Future Project <noreply@capitalcityroofing.net>",
             to: [CONTACT_EMAIL],
             replyTo: email,
             subject,
