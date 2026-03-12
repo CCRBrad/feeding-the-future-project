@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 const CONTACT_EMAIL = "feedingthefutureproject@capitalcityroofing.net";
 
@@ -54,41 +54,23 @@ export async function POST(request: Request) {
             </div>
         `;
 
-        const textBody = `
-New Website Inquiry — ${category}
+        const resend = new Resend(process.env.RESEND_API_KEY);
 
-Name: ${name}
-Email: ${email}
-Phone: ${phone || "Not provided"}
-Inquiry Type: ${category}
-
-Message:
-${message}
-
----
-Sent from the Feeding the Future Project website contact form.
-        `.trim();
-
-        // Configure email transport
-        const transporter = nodemailer.createTransport({
-            host: process.env.SMTP_HOST || "smtp.gmail.com",
-            port: parseInt(process.env.SMTP_PORT || "587"),
-            secure: process.env.SMTP_SECURE === "true",
-            auth: {
-                user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
-            },
-        });
-
-        // Send the email
-        await transporter.sendMail({
-            from: process.env.SMTP_FROM || process.env.SMTP_USER,
-            to: CONTACT_EMAIL,
+        const { error } = await resend.emails.send({
+            from: "Feeding the Future Project <onboarding@resend.dev>",
+            to: [CONTACT_EMAIL],
             replyTo: email,
             subject,
-            text: textBody,
             html: htmlBody,
         });
+
+        if (error) {
+            console.error("Resend error:", error);
+            return NextResponse.json(
+                { error: "Failed to send message. Please try again or email us directly." },
+                { status: 500 }
+            );
+        }
 
         return NextResponse.json({ success: true });
     } catch (error) {
