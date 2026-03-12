@@ -105,16 +105,16 @@ export default function SchoolsPage() {
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4">
                         {[
-                            { role: "School Administrators", desc: "Principals and assistant principals looking for community partnerships." },
-                            { role: "Counselors", desc: "School counselors connecting students and families with outside support." },
-                            { role: "Teachers", desc: "Educators who see needs in the classroom and want to help address them." },
-                            { role: "Family Engagement Staff", desc: "Staff focused on parent communication, attendance, and family support." },
-                            { role: "District Leaders", desc: "Coordinators exploring scalable community partnerships across schools." },
+                            { role: "School Administrators", desc: "Principals and assistant principals looking for community partnerships.", icon: "🏫" },
+                            { role: "Counselors", desc: "School counselors connecting students and families with outside support.", icon: "💚" },
+                            { role: "Teachers", desc: "Educators who see needs in the classroom and want to help address them.", icon: "📚" },
+                            { role: "Family Engagement Staff", desc: "Staff focused on parent communication, attendance, and family support.", icon: "👨\u200D👩\u200D👧" },
+                            { role: "District Leaders", desc: "Coordinators exploring scalable community partnerships across schools.", icon: "🌐" },
                         ].map((item) => (
-                            <div key={item.role} className="flex items-start gap-3 px-5 py-4 bg-white rounded-xl border border-neutral-200/80">
-                                <div className="w-2 h-2 bg-brand-500 rounded-full flex-shrink-0 mt-2" />
+                            <div key={item.role} className="flex items-start gap-4 px-5 py-4 bg-white rounded-xl border-l-4 border-l-brand-400 border border-neutral-200/80 hover:shadow-md transition-all">
+                                <span className="text-xl flex-shrink-0 mt-0.5" role="img" aria-hidden="true">{item.icon}</span>
                                 <div>
-                                    <span className="font-medium text-neutral-800 block">{item.role}</span>
+                                    <span className="font-semibold text-neutral-900 block">{item.role}</span>
                                     <span className="text-sm text-neutral-600">{item.desc}</span>
                                 </div>
                             </div>

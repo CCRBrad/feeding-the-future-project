@@ -1,6 +1,6 @@
 import { generatePageMetadata } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/constants";
-import { PageHero, Section, SectionHeader, Card, Button } from "@/components/ui";
+import { PageHero, Section, SectionHeader, Button } from "@/components/ui";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import StructuredData from "@/components/seo/StructuredData";
 
@@ -27,40 +27,159 @@ export default function ProgramsPage() {
                 description="Everything we do falls into three core areas. Each one is designed to create practical, measurable support for children, families, and communities."
             />
 
-            {/* Core Programs */}
+            {/* Program 1: Family Support */}
             <Section className="bg-white">
-                <SectionHeader eyebrow="Core Program Areas" title="What We Do" />
-                <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-                    <Card
-                        icon={
-                            <svg className="w-6 h-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-                        }
-                        title="Family Support"
-                        description="Direct support including meals, supplies, referrals, and community connections for families identified through school partners and community outreach. 2026 goal: serve 200 families."
-                        href="/familysupport/"
-                    />
-                    <Card
-                        icon={
-                            <svg className="w-6 h-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                            </svg>
-                        }
-                        title="School Partnerships"
-                        description="Structured partnerships with Title I schools — providing on-site resources, volunteer support, family outreach, and collaborative events. 5 active partnerships."
-                        href="/schools/"
-                    />
-                    <Card
-                        icon={
-                            <svg className="w-6 h-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0z" />
-                            </svg>
-                        }
-                        title="Community Engagement"
-                        description="Service events, food drives, volunteer mobilization, and partnership gatherings that bring people together. 2026 goal: 12 events, 300 participants."
-                        href="/events/"
-                    />
+                <div className="max-w-5xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-10 items-start">
+                        <div>
+                            <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-2">Program Area 1</p>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">Family Support</h2>
+                            <p className="text-neutral-600 leading-relaxed mb-6">
+                                At the heart of everything we do is direct, practical support for families who need it most.
+                                Through school referrals and community outreach, we connect families with meals, supplies,
+                                resource referrals, and genuine community care — all delivered with dignity and respect.
+                            </p>
+                            <div className="space-y-3 mb-6">
+                                {[
+                                    "Meals, groceries, and essential supplies for families in need",
+                                    "Referrals to local services like utility assistance, housing, and counseling",
+                                    "Back-to-school kits and seasonal support packages",
+                                    "Personalized outreach — not one-size-fits-all",
+                                ].map((item) => (
+                                    <div key={item} className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg>
+                                        <span className="text-sm text-neutral-700">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <Button href="/familysupport/" variant="primary">Learn More About Family Support</Button>
+                        </div>
+                        <div className="bg-gradient-to-br from-brand-50 to-warm-50 rounded-2xl p-8 border border-brand-100">
+                            <h3 className="font-bold text-brand-900 text-lg mb-4">2026 Goals</h3>
+                            <div className="space-y-4">
+                                {[
+                                    { figure: "200", label: "Families supported" },
+                                    { figure: "500", label: "Supply kits delivered" },
+                                    { figure: "100%", label: "Referral follow-through" },
+                                ].map((stat) => (
+                                    <div key={stat.label} className="flex items-center gap-4">
+                                        <span className="text-2xl font-extrabold text-brand-900 w-20 text-right">{stat.figure}</span>
+                                        <span className="text-sm text-brand-700">{stat.label}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="text-xs text-brand-600 mt-4 pt-4 border-t border-brand-200">
+                                Founded November 2025. These are our targets for the first full year of operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            {/* Program 2: School Partnerships */}
+            <Section className="bg-neutral-50">
+                <div className="max-w-5xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-10 items-start">
+                        <div className="lg:order-2">
+                            <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-2">Program Area 2</p>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">School Partnerships</h2>
+                            <p className="text-neutral-600 leading-relaxed mb-6">
+                                Schools are where we meet students and families where they already are. We build structured
+                                partnerships with Title I and community schools in the greater Atlanta metro area — providing
+                                on-site resources, volunteer support, family outreach, and collaborative events that extend
+                                each school&apos;s ability to serve its community.
+                            </p>
+                            <div className="space-y-3 mb-6">
+                                {[
+                                    "On-site volunteer presence for events and campus activities",
+                                    "Student resource support: supplies, meals, and essentials",
+                                    "Family outreach and referral coordination through school staff",
+                                    "Co-organized community events and seasonal drives",
+                                ].map((item) => (
+                                    <div key={item} className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg>
+                                        <span className="text-sm text-neutral-700">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <Button href="/schools/" variant="primary">Explore School Partnerships</Button>
+                        </div>
+                        <div className="lg:order-1 bg-white rounded-2xl p-8 border border-neutral-200/80 shadow-sm">
+                            <h3 className="font-bold text-neutral-900 text-lg mb-4">How It Works</h3>
+                            <div className="space-y-5">
+                                {[
+                                    { step: "1", title: "Reach Out", desc: "A school leader or staff member contacts us to start a conversation." },
+                                    { step: "2", title: "Scope the Partnership", desc: "We listen to the school's unique needs and build a support plan together." },
+                                    { step: "3", title: "Deliver & Measure", desc: "We begin providing resources, volunteers, and events — and track outcomes quarterly." },
+                                ].map((item) => (
+                                    <div key={item.step} className="flex gap-4">
+                                        <div className="flex-shrink-0 w-8 h-8 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-xs">
+                                            {item.step}
+                                        </div>
+                                        <div>
+                                            <h4 className="font-semibold text-neutral-900 text-sm">{item.title}</h4>
+                                            <p className="text-xs text-neutral-600 leading-relaxed">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            {/* Program 3: Community Engagement */}
+            <Section className="bg-white">
+                <div className="max-w-5xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-10 items-start">
+                        <div>
+                            <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-2">Program Area 3</p>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">Community Engagement</h2>
+                            <p className="text-neutral-600 leading-relaxed mb-6">
+                                Community events are where the mission comes to life. Through service days, food drives,
+                                volunteer mobilization, and partnership gatherings, we create tangible opportunities for
+                                people to give their time, resources, and care to families and students who benefit most.
+                            </p>
+                            <div className="space-y-3 mb-6">
+                                {[
+                                    "Back-to-school supply drives and holiday support events",
+                                    "Volunteer service days at partner schools",
+                                    "Food drives and community meal coordination",
+                                    "Partnership gatherings to strengthen community networks",
+                                ].map((item) => (
+                                    <div key={item} className="flex items-start gap-3">
+                                        <svg className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg>
+                                        <span className="text-sm text-neutral-700">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex flex-wrap gap-3">
+                                <Button href="/events/" variant="primary">View Events</Button>
+                                <Button href="/volunteer/" variant="outline">Volunteer With Us</Button>
+                            </div>
+                        </div>
+                        <div className="bg-gradient-to-br from-warm-50 to-brand-50 rounded-2xl p-8 border border-warm-100">
+                            <h3 className="font-bold text-neutral-900 text-lg mb-4">2026 Goals</h3>
+                            <div className="space-y-4">
+                                {[
+                                    { figure: "12", label: "Community events organized" },
+                                    { figure: "300", label: "Total participants engaged" },
+                                    { figure: "75", label: "Active volunteers mobilized" },
+                                ].map((stat) => (
+                                    <div key={stat.label} className="flex items-center gap-4">
+                                        <span className="text-2xl font-extrabold text-brand-900 w-20 text-right">{stat.figure}</span>
+                                        <span className="text-sm text-brand-700">{stat.label}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Section>
 
@@ -75,43 +194,23 @@ export default function ProgramsPage() {
                     {[
                         {
                             title: "Dignity First",
-                            desc: "Every family and individual we serve is treated with respect, confidentiality, and care. We never make people feel like a case number. Support is delivered with warmth, not paperwork.",
+                            desc: "Every family and individual we serve is treated with respect, confidentiality, and care. Support is delivered with warmth, not paperwork.",
                             icon: "💜",
                         },
                         {
                             title: "School-Referred",
-                            desc: "Our primary referral pathway is through school partners who already know their students and families. This means support reaches the people who need it most, through people they already trust.",
+                            desc: "Our primary referral pathway is through school partners who already know their students and families — support reaches people through people they already trust.",
                             icon: "🏫",
                         },
                         {
                             title: "Community-Powered",
-                            desc: "Everything we do is made possible by local volunteers, donors, and partners. We believe the best solutions come from the community itself — we just help organize and deliver them.",
+                            desc: "Everything we do is made possible by local volunteers, donors, and partners. The best solutions come from the community itself.",
                             icon: "🤝",
                         },
                     ].map((item) => (
                         <div key={item.title} className="bg-white rounded-2xl p-6 sm:p-8 border border-brand-100 text-center">
                             <div className="text-3xl mb-4"><span role="img" aria-hidden="true">{item.icon}</span></div>
                             <h3 className="font-bold text-neutral-900 text-lg mb-3">{item.title}</h3>
-                            <p className="text-sm text-neutral-600 leading-relaxed">{item.desc}</p>
-                        </div>
-                    ))}
-                </div>
-            </Section>
-
-            {/* How Programs Work */}
-            <Section className="bg-white">
-                <SectionHeader
-                    eyebrow="Our Approach"
-                    title="How Our Programs Work"
-                />
-                <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-6">
-                    {[
-                        { title: "Identify Needs", desc: "We work with schools and community leaders to identify where support is needed most — not through guesswork, but through trusted relationships and referrals." },
-                        { title: "Mobilize Resources", desc: "We connect donors, volunteers, and partners with specific, actionable opportunities. Every resource is matched to a real, identified need." },
-                        { title: "Deliver & Measure", desc: "We deliver support, track results, and report outcomes quarterly. This keeps us accountable and helps us improve continuously." },
-                    ].map((item) => (
-                        <div key={item.title} className="bg-neutral-50 rounded-xl p-6 border border-neutral-200/80 text-center">
-                            <h3 className="font-semibold text-neutral-900 mb-2">{item.title}</h3>
                             <p className="text-sm text-neutral-600 leading-relaxed">{item.desc}</p>
                         </div>
                     ))}
@@ -134,7 +233,7 @@ export default function ProgramsPage() {
                             },
                             {
                                 title: "Volunteer-Driven Delivery",
-                                desc: "Our 75+ active volunteers are the backbone of program delivery. We invest in training, communication, and meaningful volunteer experiences to maintain quality and consistency.",
+                                desc: "Our active volunteers are the backbone of program delivery. We invest in training, communication, and meaningful volunteer experiences to maintain quality.",
                             },
                             {
                                 title: "Transparent Financials",

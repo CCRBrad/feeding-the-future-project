@@ -49,7 +49,7 @@ export default function HomePage() {
       {/* Impact Snapshot */}
       <Section className="bg-white">
         <SectionHeader
-          eyebrow="Our Impact So Far"
+          eyebrow="2026 Goals"
           title="Turning Support Into Action"
         />
         <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -153,6 +153,33 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* How Support Gets Delivered */}
+      <Section className="bg-white">
+        <SectionHeader
+          eyebrow="Our Process"
+          title="How Support Gets Delivered"
+          description="From identifying needs to delivering results, here is how every act of support reaches the families and students who need it."
+        />
+        <div className="max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-4 gap-4">
+            {[
+              { step: "1", title: "Identify", desc: "Schools and community partners refer families with specific, verified needs." },
+              { step: "2", title: "Mobilize", desc: "We match donors, volunteers, and resources to each identified need." },
+              { step: "3", title: "Deliver", desc: "Support is delivered personally — with dignity, care, and follow-through." },
+              { step: "4", title: "Measure", desc: "We track outcomes quarterly and share results with partners and donors." },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="w-10 h-10 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-sm mx-auto mb-3">
+                  {item.step}
+                </div>
+                <h3 className="font-semibold text-neutral-900 text-sm mb-1">{item.title}</h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       {/* How We Help */}
       <Section className="bg-neutral-50">
