@@ -43,7 +43,7 @@ export default function PrivacyPage() {
                     </p>
                     <ul className="list-disc pl-6 text-neutral-600 space-y-2 mb-4">
                         <li><strong>Contact Information:</strong> Name, email address, and phone number when you submit our contact form or volunteer inquiry.</li>
-                        <li><strong>Donation Information:</strong> When you make a donation through our third-party payment processor (PayPal), your payment information is handled securely by that provider. We do not store credit card numbers.</li>
+                        <li><strong>Donation Information:</strong> When you make a donation through our website, your payment information is handled securely by our third-party payment processor. We do not store credit card numbers.</li>
                         <li><strong>Usage Data:</strong> We may use analytics tools to understand how visitors use our site. This data is anonymized and used to improve the visitor experience.</li>
                     </ul>
 

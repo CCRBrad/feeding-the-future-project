@@ -103,10 +103,10 @@ export default function DonatePage() {
                             Ready to Give?
                         </h3>
                         <p className="text-neutral-600 mb-6 text-sm">
-                            Donations are processed securely. You will be directed to our payment partner to complete your gift.
+                            Let us know how you would like to contribute. We will follow up personally to coordinate your gift.
                         </p>
-                        <Button href="https://www.paypal.com/donate" variant="primary" size="lg" className="w-full sm:w-auto">
-                            Donate Now — Secure Checkout
+                        <Button href="/contact/?category=Donation+%2F+Sponsorship" variant="primary" size="lg" className="w-full sm:w-auto">
+                            Donate — Contact Us
                         </Button>
                         <p className="text-xs text-neutral-500 mt-4">
                             Feeding the Future Project Inc. is a registered 501(c)(3) nonprofit organization. Your gift may be tax-deductible.

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { Section, SectionHeader } from "@/components/ui";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { INQUIRY_CATEGORIES } from "@/lib/constants";
@@ -14,7 +15,8 @@ const inquiryCards = [
     { label: "Events", desc: "Event participation, sponsorship, or questions about upcoming events.", icon: "📅" },
 ];
 
-export default function ContactPage() {
+function ContactPageContent() {
+    const searchParams = useSearchParams();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -25,6 +27,18 @@ export default function ContactPage() {
     const [submitted, setSubmitted] = useState(false);
     const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState("");
+
+    useEffect(() => {
+        const categoryParam = searchParams.get("category");
+        if (categoryParam) {
+            const matched = INQUIRY_CATEGORIES.find(
+                (c) => c.toLowerCase() === categoryParam.toLowerCase()
+            );
+            if (matched) {
+                setFormData((prev) => ({ ...prev, category: matched }));
+            }
+        }
+    }, [searchParams]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -322,5 +336,13 @@ export default function ContactPage() {
                 </div>
             </Section>
         </>
+    );
+}
+
+export default function ContactPage() {
+    return (
+        <Suspense fallback={null}>
+            <ContactPageContent />
+        </Suspense>
     );
 }
