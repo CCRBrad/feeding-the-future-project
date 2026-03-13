@@ -133,6 +133,12 @@ export default function Footer() {
                         >
                             Accessibility
                         </Link>
+                        <a
+                            href="/sitemap.xml"
+                            className="hover:text-neutral-300 transition-colors"
+                        >
+                            Sitemap
+                        </a>
                     </div>
                 </div>
             </div>
