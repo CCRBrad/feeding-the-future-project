@@ -163,7 +163,7 @@ export default function ImpactPage() {
                 <SectionHeader
                     eyebrow="Milestones"
                     title="Progress to Date"
-                    description="As a newly founded organization, we are tracking milestones as we grow. This section will be updated as goals are reached."
+                    description="Current reporting period: Q1 2026 (January — March). As a newly founded organization, we are tracking milestones as we grow."
                 />
                 <div className="max-w-3xl mx-auto">
                     <div className="space-y-4">
@@ -215,6 +215,7 @@ export default function ImpactPage() {
                     <p className="text-lg text-neutral-600 mb-8">
                         Every dollar, every hour, and every partnership adds up. Here is how you can contribute to the next chapter of this work.
                     </p>
+                    <p className="text-xs text-neutral-500 mb-6">Last updated: March 2026</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Button href="/donate/" variant="primary" size="lg">
                             Donate

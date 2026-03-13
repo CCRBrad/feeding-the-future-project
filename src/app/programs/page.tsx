@@ -65,7 +65,7 @@ export default function ProgramsPage() {
                                     { figure: "100%", label: "Referral follow-through" },
                                 ].map((stat) => (
                                     <div key={stat.label} className="flex items-center gap-4">
-                                        <span className="text-2xl font-extrabold text-brand-900 w-20 text-right">{stat.figure}</span>
+                                        <span className="text-2xl font-extrabold text-brand-900 w-24 text-right">{stat.figure}</span>
                                         <span className="text-sm text-brand-700">{stat.label}</span>
                                     </div>
                                 ))}
@@ -173,7 +173,7 @@ export default function ProgramsPage() {
                                     { figure: "75", label: "Active volunteers mobilized" },
                                 ].map((stat) => (
                                     <div key={stat.label} className="flex items-center gap-4">
-                                        <span className="text-2xl font-extrabold text-brand-900 w-20 text-right">{stat.figure}</span>
+                                        <span className="text-2xl font-extrabold text-brand-900 w-24 text-right">{stat.figure}</span>
                                         <span className="text-sm text-brand-700">{stat.label}</span>
                                     </div>
                                 ))}
