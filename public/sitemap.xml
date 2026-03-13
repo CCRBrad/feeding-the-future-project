@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://feedingthefutureproject.org/</loc>
+    <loc>https://www.feedingthefutureproject.org/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/about/</loc>
+    <loc>https://www.feedingthefutureproject.org/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/programs/</loc>
+    <loc>https://www.feedingthefutureproject.org/programs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/schools/</loc>
+    <loc>https://www.feedingthefutureproject.org/schools/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/volunteer/</loc>
+    <loc>https://www.feedingthefutureproject.org/volunteer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/donate/</loc>
+    <loc>https://www.feedingthefutureproject.org/donate/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/impact/</loc>
+    <loc>https://www.feedingthefutureproject.org/impact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/events/</loc>
+    <loc>https://www.feedingthefutureproject.org/events/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/familysupport/</loc>
+    <loc>https://www.feedingthefutureproject.org/familysupport/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/contact/</loc>
+    <loc>https://www.feedingthefutureproject.org/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/privacy/</loc>
+    <loc>https://www.feedingthefutureproject.org/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/terms/</loc>
+    <loc>https://www.feedingthefutureproject.org/terms/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://feedingthefutureproject.org/accessibility/</loc>
+    <loc>https://www.feedingthefutureproject.org/accessibility/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

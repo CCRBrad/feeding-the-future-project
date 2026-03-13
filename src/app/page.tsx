@@ -130,28 +130,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Community Visual Strip */}
-      <section className="bg-white py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-3 sm:gap-4">
-            {[
-              { label: "Volunteers In Action", gradient: "from-brand-100 to-brand-200" },
-              { label: "Community Food Drive", gradient: "from-warm-100 to-warm-200" },
-              { label: "School Partnership", gradient: "from-earth-100 to-earth-200" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className={`aspect-[4/3] rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center p-4`}
-              >
-                <p className="text-sm font-medium text-neutral-700 text-center leading-snug">{item.label}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-neutral-400 mt-3">
-            Real community photos coming soon
-          </p>
-        </div>
-      </section>
 
       {/* How Support Gets Delivered */}
       <Section className="bg-white">

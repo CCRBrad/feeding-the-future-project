@@ -1,5 +1,5 @@
 export const SITE_NAME = "Feeding the Future Project";
-export const SITE_URL = "https://feedingthefutureproject.org";
+export const SITE_URL = "https://www.feedingthefutureproject.org";
 export const SITE_DESCRIPTION =
     "Feeding the Future Project serves children, families, and schools through practical community support, partnerships, and real action.";
 
